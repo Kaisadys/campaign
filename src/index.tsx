@@ -2,9 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import NavBar from './Header';
-import Filter from './Filter'
+import Filter from './Titles'
 import App from './Table';
 import reportWebVitals from './reportWebVitals';
+import Titles from './Titles';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -12,7 +13,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <NavBar />
-    <Filter/>
+    <Titles/>
     <App/>
   </React.StrictMode>
 );

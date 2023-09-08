@@ -55,7 +55,7 @@ for (let i = 0; i < 100; i++) {
 const App: React.FC = () => (
   <>
   <Tabs initialTab={0} />
-  <Table columns={columns} dataSource={data} scroll={{ x: 1500, y: 300 }} />
+  
   </>
         
 );

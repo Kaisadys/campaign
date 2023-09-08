@@ -2,6 +2,9 @@
 import React, { useState } from 'react';
 import './App.css';
 import type { ColumnsType } from 'antd/es/table';
+import Table from 'antd/es/table';
+import SearchBar from './SearchBar';
+
 // import { ColumnsType } from 'antd/es/table/interface';
 
 interface TabsProps {
@@ -62,10 +65,20 @@ const Tabs: React.FC<TabsProps> = ({ initialTab }) => {
   const handleTabClick = (tabIndex: number) => {
     setActiveTab(tabIndex);
   };
+  const [searchResults, setSearchResults] = useState<string[]>([]);
 
+  const handleSearch = (searchTerm: string) => {
+    // Implement your search logic here.
+    // For this example, we'll just filter some dummy data.
+    const dummyData = ['apple', 'banana', 'cherry', 'date'];
+    const filteredResults = dummyData.filter(item =>
+      item.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+    setSearchResults(filteredResults);
+  };
   return (
     <div>
-      <div className="tab-buttons">
+      <div className="tab-container">
         <div 
           onClick={() => handleTabClick(0)}
           className={activeTab === 0 ? 'active' : ''}
@@ -82,9 +95,29 @@ const Tabs: React.FC<TabsProps> = ({ initialTab }) => {
         </div>
       </div>
       <div className="tab-content">
-        {activeTab === 0 && <div>Content for Tab 1</div>}
+        {activeTab === 0 && <div>
+          <div >
+      <SearchBar onSearch={handleSearch} />
+      <ul>
+        {searchResults.map((result, index) => (
+          <li key={index}>{result}</li>
+        ))}
+      </ul>
+    </div>
+          {/* <Table columns={columns} dataSource={data} scroll={{ x: 1500, y: 300 }} /> */}
+          </div>}
         {activeTab === 1 && <div>
-            Content for Tab 2
+          <div >
+      <SearchBar onSearch={handleSearch} />
+      <ul>
+        {searchResults.map((result, index) => (
+          <li key={index}>{result}</li>
+        ))}
+      </ul>
+    </div>
+          <Table columns={columns} dataSource={data} scroll={{ x: 1500, y: 300 }} style={{
+  
+      }} />
             
             </div>}
       </div>
