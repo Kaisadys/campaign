@@ -78,8 +78,15 @@ const Tabs: React.FC<TabsProps> = ({ initialTab }) => {
   };
   return (
     <div>
-      <div className="tab-container">
+      <div className="tab-container" 
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          height: "100%"
+        }}
+      >
         <div 
+       
           onClick={() => handleTabClick(0)}
           className={activeTab === 0 ? 'active' : ''}
           
@@ -88,6 +95,7 @@ const Tabs: React.FC<TabsProps> = ({ initialTab }) => {
           </div>
           
         <div
+      
           onClick={() => handleTabClick(1)}
           className={activeTab === 1 ? 'active' : ''}
         >

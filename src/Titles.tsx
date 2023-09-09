@@ -7,7 +7,12 @@ const Titles: React.FC = () => {
 
   return (
     
-    <div >
+    <div style={{
+      display: "flex",
+      alignItems: "center",
+      marginLeft:220,
+      height: "100%"
+    }}>
      <ul className='vertical-list'>
      <li className='customers'>
        Customers
