@@ -7,8 +7,9 @@ import type { ColumnsType } from 'antd/es/table';
 interface DataType {
   key: React.Key;
   name: string;
-  age: number;
-  address: string;
+  description: string;
+  target_group: string;
+  campaign_status:string;
 }
 
 const columns: ColumnsType<DataType> = [
@@ -46,9 +47,10 @@ const data: DataType[] = [];
 for (let i = 0; i < 100; i++) {
   data.push({
     key: i,
-    name: `Edward ${i}`,
-    age: 32,
-    address: `London Park no. ${i}`,
+    name: `Mobile app coming soon`,
+    description: "Lorem ipsum dolor sit amet consectetur. Diam phasellus ut nisl dol...",
+    target_group: `All customers`,
+    campaign_status:'Active'
   });
 }
 

@@ -1,13 +1,14 @@
 import { Select } from 'antd';
 import React, { useState } from 'react';
-import CampaingIcon from './campaign-form-icon.svg'
+import { ReactComponent as Create } from "./campaing_icon.svg";
+import FormItem from 'antd/es/form/FormItem';
 
 interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
 }
 const target_group = [
-    {label: "target group"},
+    {label: "Select your target group"},
    ];
 const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
   const [formData, setFormData] = useState({
@@ -42,10 +43,12 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
             <button className="close-button" onClick={onClose}>
               X
             </button>
-            <h2 className='form-title'>Create Campaign</h2>
+            <h2 className='form-title'><Create/>Create Campaign</h2>
             <form onSubmit={handleSubmit}>
               <div className="campaign-title">
                 <label htmlFor="name">Campaign Title</label>
+                <FormItem>
+
                 <div className='campaign-title-input'>
                 <input
                   type="text"
@@ -57,13 +60,15 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
                   onChange={handleChange}
                 />
                 </div>
+                </FormItem>
+
                
               </div>
               <div className="description">
-                <label htmlFor="email">Description</label>
+                <label htmlFor="email" >Description</label>
                 <div>
                 <textarea
-        style={{ width: '100%', height: '100px' }} // Adjust the styles as needed
+                className='description-box'
         value={textareaValue}
         onChange={handleTextareaChange}
         placeholder="Enter text here..."
@@ -81,8 +86,8 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
               </div>
               </div>
               <div className="form-group">
-                <label htmlFor="email">Target Group</label>
-                <Select options={target_group}></Select>
+                <label htmlFor="email" className='target-group-label'>Target Group</label>
+                <Select options={target_group} placeholder="select your target group" className='select-target'>select your target group</Select>
                 
               </div>
               <button type="submit" className='submit-comment'>Submit your comment</button>
