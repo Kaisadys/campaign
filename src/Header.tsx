@@ -1,3 +1,4 @@
+import React from "react";
 import {
   DeleteOutlined,
   EditOutlined,
@@ -8,8 +9,10 @@ import {
   SearchOutlined,
 } from "@ant-design/icons";
 import { Breadcrumb, Layout, Menu, Button, Space } from "antd";
-import React from "react";
 import { ReactComponent as Logo } from "./logo.svg";
+import { ReactComponent as Calender } from "./calender.svg";
+import { ReactComponent as Customers } from "./customers.svg";
+import { ReactComponent as Services } from "./services.svg";
 import "./App.css";
 
 const { Header, Content, Footer } = Layout;
@@ -18,7 +21,7 @@ const NavBar: React.FC = () => (
   <Space>
     <Layout className="layout">
       <Header className="header">
-        <div>
+        <div className="header-content">
           <Logo />
           <Space>
             <div>
@@ -26,18 +29,18 @@ const NavBar: React.FC = () => (
               Dashboard
             </div>
             <div>
-              <img src="./calender.png" alt="My Image" />
+            <Calender />
               Bookings
             </div>
-            <div>
-              <HomeOutlined />
-              Dashboard
+            <div style={{marginLeft:'50'}}>
+              <Customers />
+              Customers
             </div>
             <div>
-              <HomeOutlined />
-              Dashboard
+              <Services />
+              Services
             </div>
-            <Button>Buukmenow@gmail.com</Button>
+            <div ><Button className="email-button">Buukmenow@gmail.com</Button></div>
           </Space>
         </div>
       </Header>

@@ -18,8 +18,43 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-left: 120px;
+
+
 }
 
+:where(.css-dev-only-do-not-override-nnuwmp).ant-space-align-center {
+  gap: 35px !important;
+  margin-left: 10px;
+}
+:where(.css-dev-only-do-not-override-nnuwmp).ant-layout {
+  display: flex;
+  flex: auto;
+  flex-direction: column;
+  min-height: 0;
+  background:#ffffff;
+}
+.header-content{
+  font-family: Matter;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  letter-spacing: -0.02em;
+  text-align: left;
+  margin-left: 100px;
+}
+.email-button{
+  width: Fixed (208px);
+  height: Hug (42px);
+  padding: 8px 16px 8px 16px;
+  border-radius: 4px;
+  border: 1px;
+  gap: 16px;
+  margin-left: 150px;
+  
+
+
+}
 .App-header {
   background-color: #ffffff;
   min-height: 100vh;
@@ -59,6 +94,12 @@
 .tab-content {
   margin-top: 20px;
 }
+.table{
+  width: 1500px;
+  height:480px;
+  top: 328px;
+  
+}
 
 .modal-overlay {
   position: fixed;
@@ -71,6 +112,14 @@
   justify-content: center;
   align-items: center;
   z-index: 999;
+  /* width: Fixed (480px);
+height: Hug (716px);
+top: 142px;
+left: 451px;
+padding: 32px;
+border-radius: 8px;
+gap: 40px */
+
 }
 
 .modal {
@@ -78,9 +127,9 @@
   /* width: 400px; */
   display: inline-block;
   width: auto;
-  width: 300px;
-  height: 420px;
-  /* top: 142px; */
+  width: 480px;
+  height: 716px;
+  top: 142px;
   left: 451px;
   padding: 32px;
   border-radius: 4px;
@@ -200,6 +249,8 @@
 label {
   display: block;
   margin-bottom: 5px;
+
+  margin-left: 15px;
 }
 
 input {
@@ -224,15 +275,16 @@ button[type="submit"]:hover {
 .form-title {
   width: 166px;
   height: 14px;
-
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 15px;
   font-family: Matter;
   font-size: 20px;
   font-weight: 500;
   line-height: 24px;
   letter-spacing: -0.025em;
   text-align: left;
-
-  background: #2b3834;
+ color: #2b3834;
 }
 .campaign-title {
   font-family: Matter;
@@ -241,13 +293,19 @@ button[type="submit"]:hover {
   line-height: 17px;
   letter-spacing: -0.025em;
   text-align: left;
+
 }
 .campaign-title-input {
-  width: Fill (416px);
-  height: Fixed (48px);
+  width: 416px;
+  height: 18px;
   border-radius: 6px;
-  border: 1.5px;
-  border: 1.5px solid #cccfce66;
+  /* border: 1.5px; */
+  /* border: 1.5px solid #cccfce66; */
+  gap: 10px;
+  padding: 16px;
+  margin-bottom: 15px;
+
+
 }
 .description {
   font-family: Matter;
@@ -258,17 +316,35 @@ button[type="submit"]:hover {
   text-align: left;
 }
 .description-box {
-  width: Fill (416px);
-  height: Fixed (240px) !important;
+  width:  448px;
+  height:  240px;
   border-radius: 6px;
   border: 1.5px;
   gap: 10px;
+  margin-left: 15px;
   border: 1.5px solid #cccfce66;
 }
+.select-target{
+  width: 480px;
+  height: 48px;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1.5px;
+  font-family: Matter;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  letter-spacing: -0.025em;
+  text-align: left;
+
+
+  
+}
 .submit-comment {
-  width: Fill (416px);
-  height: Fixed (48px);
-  padding: 12px 20px 12px 20px;
+  width: 465px;
+  height: 48px;
+  margin-left: 10px;
+  margin-top: 30px;
   border-radius: 6px;
   gap: 10px;
   font-family: Matter;
@@ -278,22 +354,41 @@ button[type="submit"]:hover {
   letter-spacing: -0.025em;
   text-align: left;
   background: #004741 !important;
+  text-align: center;
+}
+.target-group-label{
+  font-family: Matter;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  letter-spacing: -0.025em;
+  text-align: left;
+
 }
 
 /* Style the tabs */
 .tab-container {
   display: flex;
-  margin-left: 368px;
-  background-color: #f0f0f0;
+  justify-content: center;
+  /* background-color: #f0f0f0; */
   padding: 10px;
+  width:937px;
+  height:48px;
 
 
 
 }
 
+/* .main-tab{
+  width:937px;
+  height:48px;
+
+} */
+
 .tab {
-  position: relative;
   padding: 10px 20px;
+  align-self: center;
+  justify-content: center;
   cursor: pointer;
   border-bottom: 2px solid transparent; /* Initially, no underline */
   transition: border-bottom 0.3s ease; /* Add a smooth transition */
@@ -303,28 +398,29 @@ button[type="submit"]:hover {
   line-height: 17px;
   letter-spacing: -0.025em;
   text-align: left;
+  text-decoration-color: #808785;
   color: #808785;
 }
 
 /* Style the active tab and its underline */
 .active {
   font-weight: bold;
-  width: Hug (94px);
-  height: Hug (30px);
+  height: 30px;
   padding: 0px 12px 20px 12px;
   border: 0px 0px 1.5px 0px;
   gap: 10px;
+  text-decoration-color:#00100b;
   border-bottom: 2px solid  #808785; /* Add the underline color for the active tab */
 }
 
 
-#components-layout-demo-top .logo {
+/* #components-layout-demo-top .logo {
   float: left;
   width: 120px;
   height: 31px;
   margin: 16px 24px 16px 0;
   background: rgba(255, 255, 255, 0.3);
-}
+} */
 .ant-row-rtl #components-layout-demo-top .logo {
   float: right;
   margin: 16px 0 16px 24px;
